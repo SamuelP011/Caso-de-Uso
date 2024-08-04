@@ -1,0 +1,22 @@
+{
+    "useCaseName": "",
+    "uniqueId": "",
+    "area": "",
+    "actors": "",
+    "interested": "",
+    "level": "",
+    "description": "",
+    "triggerEvent": "",
+    "triggerType": "exterior",
+    "steps": [],
+    "info": [],
+    "preconditions": "",
+    "postconditions": "",
+    "assumptions": "",
+    "successGuarantee": "",
+    "minimumGuarantee": "",
+    "requirementFulfilled": "",
+    "pendingIssues": "",
+    "priority": "",
+    "risk": ""
+}
