@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Caso de Uso</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.6.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>Información del Caso de Uso</h1>
+
+    <table>
+        <tr>
+            <th class="title" colspan="2">Detalles del Caso de Uso</th>
+        </tr>
+        <tr>
+            <td>Nombre del caso de uso:</td>
+            <td><input type="text" id="use-case-name" placeholder="Ingrese el nombre del caso de uso" oninput="updateID()"></td>
+        </tr>
+        <tr>
+            <td>ID Único:</td>
+            <td><input type="text" id="unique-id" readonly></td>
+        </tr>
+        <tr>
+            <td>Área:</td>
+            <td><input type="text" id="area"></td>
+        </tr>
+        <tr>
+            <td>Actor(es):</td>
+            <td><input type="text" id="actors"></td>
+        </tr>
+        <tr>
+            <td>Interesados:</td>
+            <td><input type="text" id="interested"></td>
+        </tr>
+        <tr>
+            <td>Nivel:</td>
+            <td><input type="text" id="level"></td>
+        </tr>
+        <tr>
+            <td>Descripción:</td>
+            <td><input type="text" id="description"></td>
+        </tr>
+        <tr>
+            <td>Evento desencadenador:</td>
+            <td><input type="text" id="trigger-event"></td>
+        </tr>
+        <tr>
+            <td>Tipo de desencadenador:</td>
+            <td>
+                <select id="trigger-type">
+                    <option value="exterior">Externo</option>
+                    <option value="temporal">Temporal</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <!-- Tabla de Pasos Realizados -->
+        <div>
+            <table id="steps-table">
+                <tr>
+                    <th class="section-title" colspan="4">Pasos Realizados (Ruta Principal)</th>
+                </tr>
+                <tbody id="steps-body">
+                    <tr>
+                        <td><input type="text" class="step-info" placeholder="Información para los pasos"></td>
+                        <td><button type="button" class="button" onclick="addStep()">Agregar</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabla de Información para los Pasos -->
+        <div>
+            <table id="info-table">
+                <tr>
+                    <th class="section-title" colspan="4">Información para los Pasos</th>
+                </tr>
+                <tbody id="info-body">
+                    <tr>
+                        <td><input type="text" class="info-field" placeholder="Información adicional para los pasos"></td>
+                        <td><button type="button" class="button" onclick="addInfo()">Agregar</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th class="section-title" colspan="2">Condiciones y Requisitos</th>
+        </tr>
+        <tr>
+            <td>Precondiciones:</td>
+            <td><input type="text" id="preconditions"></td>
+        </tr>
+        <tr>
+            <td>Postcondiciones:</td>
+            <td><input type="text" id="postconditions"></td>
+        </tr>
+        <tr>
+            <td>Suposiciones:</td>
+            <td><input type="text" id="assumptions"></td>
+        </tr>
+        <tr>
+            <td>Garantía de Éxito:</td>
+            <td><input type="text" id="success-guarantee"></td>
+        </tr>
+        <tr>
+            <td>Garantía Mínima:</td>
+            <td><input type="text" id="minimum-guarantee"></td>
+        </tr>
+        <tr>
+            <td>Requerimiento Cumplido:</td>
+            <td><input type="text" id="requirement-fulfilled"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th class="section-title" colspan="2">Otros Detalles</th>
+        </tr>
+        <tr>
+            <td>Cuestiones Pendientes:</td>
+            <td><input type="text" id="pending-issues"></td>
+        </tr>
+        <tr>
+            <td>Prioridad:</td>
+            <td><input type="text" id="priority"></td>
+        </tr>
+        <tr>
+            <td>Riesgo:</td>
+            <td><input type="text" id="risk"></td>
+        </tr>
+    </table>
+
+    <button id="print" class="button">Imprimir</button>
+    <button id="save-pdf" class="button button-move">Guardar en PDF</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
